@@ -12,7 +12,7 @@
     <artifactId>ldap</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ldap</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Demo project for Spring Boot + Spring Security + Spring Ldap</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -53,7 +53,16 @@
             <artifactId>spring-security-ldap</artifactId>
         </dependency>
     </dependencies>
-
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <url>https://bmd-nexus.21vcloud.com/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <url>https://bmd-nexus.21vcloud.com/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
     <build>
         <plugins>
             <plugin>
